@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Captcha.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+      <br>
+      <br>
+    <title>BMI Calculator</title>
+    <h1 margin="center" align="left"><span >Body Mass Index Calculator!</span></h1>
+  </head>
+  <body onload="generate()">
+    <main>
+   
+    <div class="container" >
+      <form>
+        <div class="inputs-container">
+          <div class="input-group">
+        <br>
+            <input
+              type="number"
+              placeholder="Write your height in cm"
+              id="height"
+              class="height-input" />
+          </div>
+          <div class="input-group" >
+            <br>
+            <input
+              type="number"
+              placeholder="Write your weight in Kg"
+              id="weight"
+              class="weight-input" />
+          </div>
+        </div>
+        <br>
+        <div id="user-input" class="inline">
+            <input type="text"
+                   id="submit"
+                   placeholder="Captcha code" />
+        </div>
+     
+        <div class="inline" onclick="generate()">
+            <i class="fas fa-sync"></i>
+        </div>
+     
+        <div id="image"
+             class="inline"
+             selectable="False">
+        </div>
+        <button>
+        <input type="submit"
+               id="btn"
+               onclick="printmsg()" />
+            </button>
+        <p id="key"></p>
+
+        
+        <button>
+          <input type="reset" value="Reset"/>
+        </button>
+      </form>
+      <div class="info">
+        <p class="bmi-value">0</p>
+        <p class="result"></p>
+      </div>
+    </div>
+    <script src="Captcha.js"></script>
+    </main>
+  </body>
+</html>
